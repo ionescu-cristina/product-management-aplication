@@ -9,11 +9,30 @@ import {products, Products} from "../products";
 export class ProductsComponent implements OnInit {
   pageTitle = 'Products';
   imageWidth: number = 50;
-  showImage:boolean =  false;
-  listFilter: string = 'cart';
+  showImage: boolean = false;
+
+  private  _listFilter: string = '';
+
+  get listFilter(): string {
+    return this._listFilter;
+  }
+
+  set setFilter(value: string) {
+    this._listFilter = value;
+    this.filteredProducts = this.performFilter(value);
+  }
+
+  filteredProducts: Products[] = [];
+
   products: Products[] = products;
 
   constructor() {
+  }
+
+  performFilter(filterBy: string): Products[] {
+    filterBy = filterBy.toLocaleLowerCase();
+    return this.products.filter((products: Products) =>
+      products.productName.toLocaleLowerCase().includes(filterBy));
   }
 
   ngOnInit(): void {
