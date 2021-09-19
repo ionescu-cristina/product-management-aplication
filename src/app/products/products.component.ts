@@ -17,7 +17,7 @@ export class ProductsComponent implements OnInit {
     return this._listFilter;
   }
 
-  set setFilter(value: string) {
+  set listFilter(value: string) {
     this._listFilter = value;
     this.filteredProducts = this.performFilter(value);
   }
