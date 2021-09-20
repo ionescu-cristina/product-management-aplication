@@ -18,7 +18,7 @@ export const products = [
     "releaseDate": "March 19, 2021",
     "description": "Leaf rake with 48-inch wooden handle.",
     "price": 19.95,
-    "starRating": 3,
+    "starRating": 3.2,
     "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/Red_Apple.jpg"
   },
   {

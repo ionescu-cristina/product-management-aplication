@@ -11,7 +11,7 @@ export class ProductsComponent implements OnInit {
   imageWidth: number = 50;
   showImage: boolean = false;
 
-  private  _listFilter: string = '';
+  private _listFilter: string = '';
 
   get listFilter(): string {
     return this._listFilter;
@@ -36,10 +36,14 @@ export class ProductsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.listFilter = 'garden';
   }
 
   toggleImage(): void {
     this.showImage = !this.showImage;
   }
 
+  onRatingClicked(message: string): void {
+    this.pageTitle = 'Product List: ' + message;
+  }
 }
