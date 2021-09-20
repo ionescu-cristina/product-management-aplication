@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {products, Products} from "../products";
+import { Products} from "../products";
+import {ProductService} from "./product.service";
 
 @Component({
   selector: 'app-products',
@@ -23,11 +24,9 @@ export class ProductsComponent implements OnInit {
   }
 
   filteredProducts: Products[] = [];
+  products: Products[] = [];
 
-  products: Products[] = products;
-
-  constructor() {
-  }
+  constructor(private productService: ProductService ) {}
 
   performFilter(filterBy: string): Products[] {
     filterBy = filterBy.toLocaleLowerCase();
@@ -36,7 +35,8 @@ export class ProductsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.listFilter = 'garden';
+    this.products = this.productService.getProducts();
+    this.filteredProducts = this.products;
   }
 
   toggleImage(): void {
