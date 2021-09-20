@@ -1,17 +1,19 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Products} from "../products";
 import {ProductService} from "./product.service";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
-export class ProductsComponent implements OnInit {
+export class ProductsComponent implements OnInit, OnDestroy {
   pageTitle = 'Products';
   imageWidth: number = 50;
   showImage: boolean = false;
   errorMessage: string = '';
+  sub!: Subscription;
 
   private _listFilter: string = '';
 
@@ -37,14 +39,17 @@ export class ProductsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.productService.getProducts().subscribe({
+    this.sub = this.productService.getProducts().subscribe({
       next: products => {
         this.products = products;
         this.filteredProducts = this.products;
       },
       error: err => this.errorMessage = err
     });
+  }
 
+  ngOnDestroy() {
+    this.sub.unsubscribe();
   }
 
   toggleImage(): void {
