@@ -6,17 +6,20 @@ import { ProductsComponent } from './products/products.component';
 import {FormsModule} from "@angular/forms";
 import {ConvertToSpacesPipe} from "./shared/convert-to-spaces.pipe";
 import { RatingComponent } from './shared/rating/rating.component';
+import { HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductsComponent,
     ConvertToSpacesPipe,
-    RatingComponent
+    RatingComponent,
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

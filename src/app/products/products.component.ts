@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import { Products} from "../products";
+import {Products} from "../products";
 import {ProductService} from "./product.service";
 
 @Component({
@@ -11,6 +11,7 @@ export class ProductsComponent implements OnInit {
   pageTitle = 'Products';
   imageWidth: number = 50;
   showImage: boolean = false;
+  errorMessage: string = '';
 
   private _listFilter: string = '';
 
@@ -26,7 +27,8 @@ export class ProductsComponent implements OnInit {
   filteredProducts: Products[] = [];
   products: Products[] = [];
 
-  constructor(private productService: ProductService ) {}
+  constructor(private productService: ProductService) {
+  }
 
   performFilter(filterBy: string): Products[] {
     filterBy = filterBy.toLocaleLowerCase();
@@ -35,8 +37,14 @@ export class ProductsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.products = this.productService.getProducts();
-    this.filteredProducts = this.products;
+    this.productService.getProducts().subscribe({
+      next: products => {
+        this.products = products;
+        this.filteredProducts = this.products;
+      },
+      error: err => this.errorMessage = err
+    });
+
   }
 
   toggleImage(): void {
