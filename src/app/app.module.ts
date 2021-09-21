@@ -11,6 +11,8 @@ import {ProductDetailComponent} from './products/product-detail/product-detail.c
 import {RouterModule} from "@angular/router";
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {HomeComponent} from './home/home.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import {ProductDetailGuard} from "./products/product-detail/product-detail.guard";
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import {HomeComponent} from './home/home.component';
     ProductDetailComponent,
     PageNotFoundComponent,
     HomeComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,11 @@ import {HomeComponent} from './home/home.component';
     RouterModule.forRoot([
       {path: 'home', component: HomeComponent},
       {path: 'products', component: ProductsComponent},
-      {path: 'products/:id', component: ProductDetailComponent},
+      {
+        path: 'products/:id',
+        canActivate:[ProductDetailGuard],
+        component: ProductDetailComponent
+      },
       {path: '**', component: PageNotFoundComponent}
     ])
   ],

@@ -4,7 +4,6 @@ import {ProductService} from "./product.service";
 import {Subscription} from "rxjs";
 
 @Component({
-  selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
