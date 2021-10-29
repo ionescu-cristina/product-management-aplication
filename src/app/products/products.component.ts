@@ -10,7 +10,7 @@ import {Subscription} from "rxjs";
 export class ProductsComponent implements OnInit, OnDestroy {
   pageTitle = 'Products';
   imageWidth: number = 50;
-  showImage: boolean = false;
+  showImage: boolean = true;
   errorMessage: string = '';
   sub!: Subscription;
 
