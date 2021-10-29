@@ -1,0 +1,7 @@
+a.nav-link {
+  color: #333;
+}
+a:hover.nav-link {
+  color: white;
+  background-color: #2c3034;
+}

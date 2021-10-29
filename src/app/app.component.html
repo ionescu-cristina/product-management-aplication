@@ -1,19 +1,20 @@
-<nav class="navbar navbar-dark bg-dark">
+<div class="card text-center">
+  <div class="card text-center">
+    <div class="card-header">
+      <ul class="nav nav-pills card-header-pills">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="true" routerLink="/home" >Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/products">Product List</a>
+        </li>
+      </ul>
+    </div>
+  <div class="card-body">
+    <a  routerLink="/home" ><img src="/assets/images/logo.jpg" alt="Product Management"></a>
 
-  <div class="d-flex flex-row align-items-center">
-    <a class="navbar-brand m-3">{{pageTitle}}</a>
+    <router-outlet></router-outlet>
 
-    <ul class="nav">
-      <li><a routerLink="/home" class="nav-link text-white">Home</a></li>
-      <li><a routerLink="/products" class="nav-link text-white">Product List</a></li>
-    </ul>
   </div>
-
-  <form class="form-inline d-flex flex-row m-3">
-    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-light" type="submit">Search</button>
-  </form>
-</nav>
-<div class="container my-5">
-  <router-outlet></router-outlet>
+</div>
 </div>
