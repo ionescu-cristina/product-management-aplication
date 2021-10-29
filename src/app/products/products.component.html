@@ -1,25 +1,16 @@
-<div class='card'>
-  <div class='card-header'>
-    {{pageTitle}}
+<div class='row'>
+  <div class='col-md-12'>
+    <input class="form-control" type='text' [(ngModel)]='listFilter' placeholder="Type to search..."/>
   </div>
+</div>
+<div class='card'>
   <div class='card-body'>
-    <div class='row'>
-      <div class='col-md-2'>Filter by:</div>
-      <div class='col-md-4'>
-        <input type='text' [(ngModel)]='listFilter'/>
-      </div>
-    </div>
-    <div class='row'>
-      <div class='col-md-6'>
-        <h4>Filtered by: {{listFilter}}</h4>
-      </div>
-    </div>
     <div class='table-responsive'>
       <table class='table table-dark table-striped table-hover' *ngIf='products.length'>
         <thead>
         <tr>
           <th>
-            <button class='btn btn-primary' (click)=toggleImage()>
+            <button class='btn btn-warning' (click)=toggleImage()>
               {{ showImage ? 'Hide' : 'Show' }} Image
             </button>
           </th>
@@ -32,21 +23,23 @@
         </thead>
         <tbody>
         <tr *ngFor='let product of filteredProducts'>
-          <td>
+          <td class="align-middle">
             <img *ngIf='showImage'
                  [src]='product.imageUrl'
                  [alt]='product.productName'
                  [title]='product.productName'
                  [style.width.px]='imageWidth'>
           </td>
-          <td><a [routerLink]="['/products', product.productId]">{{product.productName}}</a> </td>
-          <td>{{product.productCode |  convertToSpaces:'-' | lowercase }}</td>
-          <td>{{product.releaseDate}}</td>
-          <td>{{product.price | currency: 'USD': 'symbol':'1.2-2'}}</td>
-          <td>
-            <app-rating [rating]="product.starRating"
-                        (ratingClicked)='onRatingClicked($event)'
-            ></app-rating>
+          <td class="align-middle"><a [routerLink]="['/products', product.productId]">{{product.productName}}</a> </td>
+          <td class="align-middle">{{product.productCode |  convertToSpaces:'-' | lowercase }}</td>
+          <td class="align-middle">{{product.releaseDate}}</td>
+          <td class="align-middle">{{product.price | currency: 'USD': 'symbol':'1.2-2'}}</td>
+          <td class="align-middle position-relative">
+              <div class="position-absolute top-50 start-50 translate-middle">
+                <app-rating [rating]="product.starRating"
+                            (ratingClicked)='onRatingClicked($event)'
+                ></app-rating>
+              </div>
           </td>
         </tr>
 
