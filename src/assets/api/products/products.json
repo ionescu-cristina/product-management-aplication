@@ -1,0 +1,63 @@
+[
+  {
+    "productId": 1,
+    "productName": "Lorem Picsum 1",
+    "productCode": "GDN-0011",
+    "releaseDate": "October 2021",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "price": 328,
+    "starRating": 3.2,
+    "imageUrl": "https://picsum.photos/200/300"
+  },
+  {
+    "productId": 2,
+    "productName": "Lorem Picsum 2",
+    "productCode": "GDN-0011",
+    "releaseDate": "October 2021",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "price": 328,
+    "starRating": 3.2,
+    "imageUrl": "https://picsum.photos/200/300/?blur"
+  },
+  {
+    "productId": 2,
+    "productName": "Lorem Picsum 3",
+    "productCode": "GDN-0011",
+    "releaseDate": "October 2021",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "price": 328,
+    "starRating": 3.2,
+    "imageUrl": "https://picsum.photos/id/237/200/300"
+  },
+  {
+    "productId": 2,
+    "productName": "Lorem Picsum 4",
+    "productCode": "GDN-0011",
+    "releaseDate": "October 2021",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "price": 328,
+    "starRating": 3.2,
+    "imageUrl": "https://picsum.photos/200"
+  },
+  {
+    "productId": 2,
+    "productName": "Lorem Picsum 5",
+    "productCode": "GDN-0011",
+    "releaseDate": "October 2021",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "price": 328,
+    "starRating": 3.2,
+    "imageUrl": "https://picsum.photos/seed/picsum/200/300"
+  },
+  {
+    "productId": 2,
+    "productName": "Lorem Picsum 6",
+    "productCode": "GDN-0011",
+    "releaseDate": "October 2021",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "price": 328,
+    "starRating": 3.2,
+    "imageUrl": "https://picsum.photos/200/300?grayscale"
+  }
+]
+

@@ -1,20 +1,24 @@
-<div class="card text-center">
-  <div class="card text-center">
-    <div class="card-header">
-      <ul class="nav nav-pills card-header-pills">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="true" routerLink="/home" >Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/products">Product List</a>
-        </li>
-      </ul>
+<div class="row text-center">
+  <div class="col-md-3 ">
+    <div class="card text-center vh-100">
+      <div class="card-header vh-100 bg-white">
+        <div  class="nav-item"> <a  routerLink="/home" class="nav-link" ><img src="/assets/images/logo.jpg" alt="Product Management" class="img-fluid"></a></div>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <a  routerLink="/home">Home</a>
+          </li>
+          <li class="list-group-item">
+            <a  routerLink="/products">Product List</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  <div class="card-body">
-    <a  routerLink="/home" ><img src="/assets/images/logo.jpg" alt="Product Management"></a>
-
-    <router-outlet></router-outlet>
-
   </div>
-</div>
+  <div class="col-md-9">
+    <div class="card-body">
+
+      <router-outlet></router-outlet>
+
+    </div>
+  </div>
 </div>

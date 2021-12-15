@@ -3,10 +3,10 @@
     <input class="form-control" type='text' [(ngModel)]='listFilter' placeholder="Type to search..."/>
   </div>
 </div>
-<div class='card'>
-  <div class='card-body'>
+<div class=''>
+  <div class=''>
     <div class='table-responsive'>
-      <table class='table table-dark table-striped table-hover' *ngIf='products.length'>
+      <table class='table  table-hover' *ngIf='products.length'>
         <thead>
         <tr>
           <th>
@@ -22,7 +22,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor='let product of filteredProducts'>
+        <tr *ngFor='let product of filteredProducts' class="animate__animated animate__backInRight">
           <td class="align-middle">
             <img *ngIf='showImage'
                  [src]='product.imageUrl'
@@ -35,11 +35,11 @@
           <td class="align-middle">{{product.releaseDate}}</td>
           <td class="align-middle">{{product.price | currency: 'USD': 'symbol':'1.2-2'}}</td>
           <td class="align-middle position-relative">
-              <div class="position-absolute top-50 start-50 translate-middle">
-                <app-rating [rating]="product.starRating"
-                            (ratingClicked)='onRatingClicked($event)'
-                ></app-rating>
-              </div>
+            <div class="position-absolute top-50 start-50 translate-middle">
+              <app-rating [rating]="product.starRating"
+                          (ratingClicked)='onRatingClicked($event)'
+              ></app-rating>
+            </div>
           </td>
         </tr>
 
