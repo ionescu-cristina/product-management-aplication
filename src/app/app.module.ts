@@ -9,6 +9,8 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {HomeComponent} from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProductModule } from './products/product.module';
+import {ProductsComponent} from "./products/products.component";
+import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 
 @NgModule({
   declarations: [
@@ -21,11 +23,14 @@ import { ProductModule } from './products/product.module';
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot([
-      {path: 'home', component: HomeComponent},
+      {path: '', component: ProductsComponent},
+      {path: 'home', component: ProductsComponent},
       {path: '**', component: PageNotFoundComponent}
     ]),
-    ProductModule
+    ProductModule,
+    FontAwesomeModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

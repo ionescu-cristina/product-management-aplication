@@ -4,6 +4,7 @@ import {RatingComponent} from "./rating/rating.component";
 import {FormsModule} from "@angular/forms";
 import {ConvertToSpacesPipe} from "./convert-to-spaces.pipe";
 import { SearchComponent } from './search/search.component';
+import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 
 @NgModule({
   declarations: [
@@ -11,9 +12,10 @@ import { SearchComponent } from './search/search.component';
     ConvertToSpacesPipe,
     SearchComponent,
   ],
-  imports: [
-    CommonModule
-  ],
+    imports: [
+        CommonModule,
+        FontAwesomeModule
+    ],
   exports: [
     RatingComponent,
     CommonModule,

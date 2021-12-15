@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnChanges, OnInit, Output} from '@angular/core';
-
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-rating',
   templateUrl: './rating.component.html',
@@ -9,6 +9,7 @@ export class RatingComponent implements OnChanges {
   cropWidth: number = 75;
   @Input() rating: number = 0;
   @Output() ratingClicked: EventEmitter<string> = new EventEmitter<string>();
+  faStar= faStar;
 
   constructor() {
   }
